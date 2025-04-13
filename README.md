@@ -17,7 +17,8 @@ This is a hands-on project built as part of the [Scrimba Next.js course](https:/
 - Responsive and minimalist UI design  
 
 ---
-```npm install tw-animate-css
+```
+npm install tw-animate-css
 npm install neobrutalismcss
 ```
 

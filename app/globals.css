@@ -1,3 +1,4 @@
+/* app\globals.css */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -13,7 +14,14 @@
   --ring: oklch(0% 0 0);
   --overlay: oklch(0% 0 0 / 0.8);
   --shadow: 4px 4px 0px 0px var(--border);
+  --card: oklch(96.22% 0.0569 95.61); 
+
+  /* Font family */
+  --font-sans: "Noto Rashi Hebrew", serif; 
+  --font-secondary: "Comme", sans-serif; 
+  --font-mono: Consolas, "Courier New", monospace;
 }
+
 
 .dark {
   --background: oklch(28.91% 0.0359 90.09);
@@ -24,8 +32,10 @@
   --border: oklch(0% 0 0);
   --ring: oklch(100% 0 0);
   --shadow: 4px 4px 0px 0px var(--border);
+  --card: oklch(23.93% 0 0); 
 }
 
+/* Tema inline */
 @theme inline {
   --color-main: var(--main);
   --color-background: var(--background);
@@ -44,4 +54,35 @@
   --shadow-shadow: var(--shadow);
   --font-weight-base: 700;
   --font-weight-heading: 900;
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans; 
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-secondary); 
+    font-weight: var(--font-weight-heading);
+  }
+
+  code,
+  pre {
+    font-family: var(--font-mono); 
+  }
+}
+
+
+.group:hover .group-hover\:rotate-12 {
+  transform: rotate(12deg);
 }
