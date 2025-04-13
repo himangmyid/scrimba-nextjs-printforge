@@ -47,7 +47,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="w-full bg-background border-b-4 border-border shadow-shadow">
+    <header className="w-full bg-background border-b border-border shadow-sm">
       {/* Desktop Navbar */}
       <nav className="hidden md:flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
         {/* Logo */}
