@@ -17,6 +17,7 @@
   --overlay: oklch(50% 0.05 260 / 0.8);
   --shadow: 4px 4px 0px 0px var(--border);
   --card: oklch(96% 0.01 260); /* Slightly off-white cards */
+  --grid-color: oklch(90% 0.02 260); /* Light grid color */
 }
 
 .dark {
@@ -30,6 +31,7 @@
   --ring: oklch(60% 0.1 205); /* Brighter teal focus ring */
   --shadow: 4px 4px 0px 0px var(--border);
   --card: oklch(22% 0.02 260); /* Slightly darker cards */
+  --grid-color: oklch(30% 0.04 260); /* Dark grid color */
 }
 
 /* Tema inline */
@@ -114,4 +116,29 @@ html {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Background Grid Pattern */
+.bg-grid {
+  position: relative;
+  z-index: 0;
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-grid::before {
+    animation: none;
+  }
 }

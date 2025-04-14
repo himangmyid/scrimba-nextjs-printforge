@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${notoRashiHebrew.variable} ${comme.variable} antialiased`}
+        className={`${notoRashiHebrew.variable} ${comme.variable} antialiased bg-grid`}
       >
         <Nav />
         {children}
