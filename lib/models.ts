@@ -5,7 +5,7 @@ import type { Model } from "@/app/types";
 const normalizeId = (id: string | number): string => id.toString();
 
 export async function getAllModels(): Promise<Model[]> {
-  await new Promise(resolve => setTimeout(resolve, 100)); // Simulasi delay
+  await new Promise(resolve => setTimeout(resolve, 100)); 
   return modelsData;
 }
 
@@ -16,7 +16,7 @@ export async function getModelById(id: string | number): Promise<Model> {
     throw new Error("Invalid model ID");
   }
 
-  await new Promise(resolve => setTimeout(resolve, 100)); // Simulasi delay
+  await new Promise(resolve => setTimeout(resolve, 100)); 
 
   const foundModel = modelsData.find(
     (model) => normalizeId(model.id) === normalizedId

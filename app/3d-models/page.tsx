@@ -13,12 +13,19 @@ export default async function ModelsPage({
   const itemsPerPage = 6;
   const totalPages = Math.ceil(models.length / itemsPerPage);
 
+  // Extract unique categories from models
+  const categories = ['All', ...new Set(models.map((model) => model.category))];
+
   return (
-    <ModelsPageClient
-      initialModels={models}
-      initialPage={page}
-      totalPages={totalPages}
-    />
+    <div className="models-page">
+      {/* Models List with Client-side Filtering */}
+      <ModelsPageClient
+        initialModels={models}
+        initialPage={page}
+        totalPages={totalPages}
+        categories={categories}
+      />
+    </div>
   );
 }
 

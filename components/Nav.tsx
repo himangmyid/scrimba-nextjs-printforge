@@ -43,7 +43,7 @@ export default function Navbar() {
   ];
 
   if (!isMounted) {
-    return null; // Render placeholder atau loading state
+    return null; 
   }
 
   return (

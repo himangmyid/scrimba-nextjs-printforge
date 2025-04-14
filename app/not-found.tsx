@@ -3,7 +3,7 @@
 import { FiArrowLeft } from "react-icons/fi";
 
 export default function NotFound() {
-  // Fungsi untuk menavigasi ke halaman utama
+ 
   const navigateToHome = () => {
     window.location.href = "/"; 
   };
