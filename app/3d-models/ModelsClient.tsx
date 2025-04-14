@@ -1,4 +1,4 @@
-// Pindahkan pagination ke client component untuk menghindari masalah dengan searchParams
+// app/3d-models/ModelsClient.tsx
 'use client';
 
 import { useState } from 'react';
