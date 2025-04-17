@@ -71,3 +71,6 @@ npm install neobrutalismcss
 ```
 
 > ⚙️ This project was built to sharpen my skills with the Next.js framework while applying real-world web development patterns.
+
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y21CI5QQ)
